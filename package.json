@@ -1,0 +1,29 @@
+{
+  "name": "adventofcode2024",
+  "version": "1.0.0",
+  "description": "Advent of code 2024",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidebrognoli/adventofcode2024.git"
+  },
+  "keywords": [
+    "adventofcode"
+  ],
+  "author": "Davide Brognoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidebrognoli/adventofcode2024/issues"
+  },
+  "homepage": "https://github.com/davidebrognoli/adventofcode2024#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

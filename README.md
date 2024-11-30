@@ -49,7 +49,7 @@ Alternatively, you can run specific tests with:
 `npx jest <test-name>`
 
 ## Folder Structure
-
+```
 advent-of-code2024/
 ├── src/
 │   ├── day1/
@@ -67,6 +67,7 @@ advent-of-code2024/
 │   └── ...
 └── README.md                # This file
 └── LICENSE                  # License
+```
 
 ## License
 

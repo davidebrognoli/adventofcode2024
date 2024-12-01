@@ -14,10 +14,20 @@ function readInput(relativePath) {
 /**
  * Converts a string into an array of numbers.
  * @param {string} input - The content of the input file.
+ * @param {string} split - The character to split the input by.
  * @returns {number[]} - An array of numbers.
  */
-function parseNumbers(input) {
-    return input.split('\n').map(line => parseInt(line, 10)).filter(n => !isNaN(n));
+function parseNumbers(input, split = '\n') {
+    return input.split(split).map(line => parseInt(line, 10)).filter(n => !isNaN(n));
+}
+
+/**
+ * Sort an array of numbers.
+ * @param {number[]} input - The content of the input file.
+ * @returns {number[]} - An array of numbers.
+ */
+function sortNumbers(input) {
+  return input.sort((a, b) => a - b);
 }
 
 /**
@@ -29,4 +39,4 @@ function parseLines(input) {
     return input.split('\n').filter(line => line.trim() !== '');
 }
 
-module.exports = { readInput, parseNumbers, parseLines };
+module.exports = { readInput, parseNumbers, parseLines, sortNumbers };

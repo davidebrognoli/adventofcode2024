@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 /**
  * Reads an input file from the specified path.
@@ -7,8 +7,8 @@ const path = require('path');
  * @returns {string} - The file content as a string.
  */
 function readInput(relativePath) {
-    const fullPath = path.resolve(__dirname, relativePath);
-    return fs.readFileSync(fullPath, 'utf-8');
+  const fullPath = path.resolve(__dirname, relativePath);
+  return fs.readFileSync(fullPath, "utf-8");
 }
 
 /**
@@ -17,8 +17,11 @@ function readInput(relativePath) {
  * @param {string} split - The character to split the input by.
  * @returns {number[]} - An array of numbers.
  */
-function parseNumbers(input, split = '\n') {
-    return input.split(split).map(line => parseInt(line, 10)).filter(n => !isNaN(n));
+function parseNumbers(input, split = "\n") {
+  return input
+    .split(split)
+    .map((line) => parseInt(line, 10))
+    .filter((n) => !isNaN(n));
 }
 
 /**
@@ -36,7 +39,7 @@ function sortNumbers(input) {
  * @returns {string[]} - An array of strings.
  */
 function parseLines(input) {
-    return input.split('\n').filter(line => line.trim() !== '');
+  return input.split("\n").filter((line) => line.trim() !== "");
 }
 
 module.exports = { readInput, parseNumbers, parseLines, sortNumbers };

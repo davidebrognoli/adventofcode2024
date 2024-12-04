@@ -36,10 +36,22 @@ function sortNumbers(input) {
 /**
  * Converts a string into an array of strings (lines).
  * @param {string} input - The content of the input file.
+ * @param {string} split - The character to split the input by.
  * @returns {string[]} - An array of strings.
  */
-function parseLines(input) {
-  return input.split("\n").filter((line) => line.trim() !== "");
+function parseLines(input, split = "\n") {
+  return input.split(split).filter((line) => line.trim() !== "");
 }
 
-module.exports = { readInput, parseNumbers, parseLines, sortNumbers };
+/**
+ * Converts a string into an array of array of chars.
+ * @param {string} input - The content of the input file.
+ * @returns {string[][]} - An array of array of strings.
+ */
+function parseGrid(input) {
+  return parseLines(input).map((line) => parseLines(line, ''));
+}
+
+module.exports = { readInput, parseNumbers, parseLines, parseGrid, sortNumbers };
+
+
